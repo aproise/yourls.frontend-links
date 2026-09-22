@@ -30,15 +30,18 @@ Link-in-bio page plugin for YOURLS — manage sections, links, profile and custo
 
 <details>
 <summary>Sections & Links management</summary>
-<video src="docs/screens/links-sections-demo-add_edit.mp4" width="600" autoplay loop muted playsinline alt="Sections and links CRUD"></video>
+<video src="https://github.com/user-attachments/assets/942c7e18-e6c0-43c0-8cdc-3670b6057299" width="600" autoplay loop muted playsinline alt="Sections and links CRUD"></video>
 </details>
 
 <details>
 <summary>Profile & Avatar</summary>
-<video src="docs/screens/profile-avatars-demo.mp4" width="600" autoplay loop muted playsinline alt="Profile and avatar management"></video>
+<video src="https://github.com/user-attachments/assets/f2026268-9634-44b9-b395-0aaa4224987e" width="600" autoplay loop muted playsinline alt="Profile and avatar management"></video>
 </details>
 
 <details>
+
+
+
 <summary>Custom icons</summary>
 <img src="docs/screens/add-icons-demo.png" width="600" alt="Adding custom icons">
 </details>
