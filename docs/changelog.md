@@ -2,6 +2,27 @@
 
 All notable changes to Frontend Links are documented here.
 
+## [1.8] - 2026-09-22
+
+### Added
+- **Requires at least: YOURLS 1.10** and **Requires PHP: 8.1** in plugin header metadata
+- **French translation fixed**: recompiled `.mo` using POMO library (bundled with YOURLS) — 161 translations now load correctly
+- **Locale variant fallback** in `fl_load_textdomain()`: tries `fr_FR`, `fr`, `fr_FR.UTF-8`, `fr.utf8`, etc.
+
+### Changed
+- **Rebranding**: all `github.com/sangcent` → `github.com/aproise` across 7 files (plugin.php, README.md, docs/changelog.md, includes/functions.php, languages/frontend-links-fr_FR.po, .gitignore, compile-translations.php)
+- **Author metadata**: `Sangcent` → `Aproise` (plugin.php, README.md)
+- **Textdomain loading**: replaced `plugins_loaded` hook with immediate load (before core locale init in YOURLS 1.10+), uses custom loader with locale variants
+- **compile-translations.php**: rewritten to use POMO\PO + POMO\MO for valid MO output (replaces custom buggy writer)
+
+### Fixed
+- **French translations not loading**: root cause was corrupted `.mo` file from custom MO writer; now uses YOURLS's own POMO library for compilation
+- **gettext extension requirement**: enabled in php.ini for POMO compatibility
+
+### Technical
+- Removed temporary debug logging from `fl_load_textdomain()`
+- Cleaned up test files
+
 ## [1.7] - 2026-02-23
 
 ### Fixed

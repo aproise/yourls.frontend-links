@@ -26,16 +26,16 @@ Link-in-bio page plugin for YOURLS — manage sections, links, profile and custo
 - **Security**: SVG sanitization (XSS prevention), SSRF protection on URL fetching, uploads directory lockdown
 - **i18n ready** with French translation included
 
-## Demos (Screens or GIFs)
+## Demos (Screens & Videos)
 
 <details>
 <summary>Sections & Links management</summary>
-<img src="docs/screens/links-sections-demo-add_edit_delete.gif" width="600" alt="Sections and links CRUD">
+<video src="docs/screens/links-sections-demo-add_edit.mp4" width="600" autoplay loop muted playsinline alt="Sections and links CRUD"></video>
 </details>
 
 <details>
 <summary>Profile & Avatar</summary>
-<img src="docs/screens/profile-avatars-demo.gif" width="600" alt="Profile and avatar management">
+<video src="docs/screens/profile-avatars-demo.mp4" width="600" autoplay loop muted playsinline alt="Profile and avatar management"></video>
 </details>
 
 <details>
