@@ -1,11 +1,13 @@
 <?php
 /*
 Plugin Name: Frontend Links
-Plugin URI: https://github.com/sangcent/yourls.frontend-links
+Plugin URI: https://github.com/aproise/yourls.frontend-links
 Description: Customizable link page with section, link, and profile management from the YOURLS admin.
-Version: 1.7
-Author: Sangcent
-Author URI: https://github.com/sangcent
+Version: 1.8
+Author: Aproise
+Author URI: https://github.com/aproise
+Requires at least: 1.10
+Requires PHP: 8.1
 */
 
 /**
@@ -43,18 +45,18 @@ Author URI: https://github.com/sangcent
  *     js/stats-rewrite.js   ← Admin stats fix
  *   themes/
  *     default/              ← Minimal default theme
- *     sangcent-original/      ← Original dark theme with particles
+ *     aproise-original/      ← Original dark theme with particles
  *
  * @package FrontendLinks
  * @author  Sangcent
- * @link    https://github.com/sangcent/yourls.frontend-links
+ * @link    https://github.com/aproise/yourls.frontend-links
  */
 
 // No direct access
 if (!defined('YOURLS_ABSPATH')) die();
 
 // ─── Plugin constants ───────────────────────────────────────
-define('FL_VERSION',    '1.7');
+define('FL_VERSION',    '1.8');
 define('FL_PLUGIN_DIR', __DIR__);
 define('FL_PLUGIN_SLUG', basename(__DIR__));
 define('FL_TABLE_PREFIX', 'frontend_');

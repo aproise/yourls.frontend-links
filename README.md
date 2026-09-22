@@ -55,8 +55,8 @@ Link-in-bio page plugin for YOURLS — manage sections, links, profile and custo
 
 ## Requirements
 
-- [YOURLS](https://yourls.org/) 1.9+
-- PHP 8.0+
+- [YOURLS](https://yourls.org/) 1.10+
+- PHP 8.1+
 - PHP extensions: `fileinfo` (avatar & icon uploads), `curl` (OG metadata fetching)
 - Apache with `mod_rewrite` (for auto mode)
 
@@ -195,4 +195,4 @@ MIT
 
 ## Author
 
-[Sangcent](https://github.com/sangcent)
+[Aproise](https://github.com/aproise)
