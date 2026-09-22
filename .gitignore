@@ -9,3 +9,4 @@ nul
 push.md
 /themes/aproise-original
 *.code-workspace
+compile-translations.php

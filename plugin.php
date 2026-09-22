@@ -111,9 +111,36 @@ function fl_check_pending_migration(): void
 }
 
 // ─── Load textdomain for i18n ──────────────────────────────
-yourls_add_action('plugins_loaded', 'fl_load_textdomain');
-function fl_load_textdomain() {
-    yourls_load_custom_textdomain('frontend-links', FL_PLUGIN_DIR . '/languages');
+// Load immediately (not on plugins_loaded hook) so locale from YOURLS_LANG
+// is already available. plugins_loaded fires before core locale init in YOURLS 1.10+.
+// Use custom loader to try multiple locale variants (fr_FR, fr, etc.)
+fl_load_textdomain();
+function fl_load_textdomain(): void {
+    $domain = 'frontend-links';
+    $path   = FL_PLUGIN_DIR . '/languages';
+
+    $locale = yourls_get_locale();
+    if (empty($locale)) return;
+
+    // Build locale variants to try (most specific first)
+    $variants = [$locale];
+    if (str_contains($locale, '_')) {
+        $variants[] = substr($locale, 0, strpos($locale, '_')); // fr_FR → fr
+    }
+    // Add .UTF-8 variants
+    foreach ($variants as $v) {
+        $variants[] = $v . '.UTF-8';
+        $variants[] = $v . '.utf8';
+    }
+    $variants = array_unique($variants);
+
+    // Try each variant until one loads
+    foreach ($variants as $variant) {
+        $mofile = rtrim($path, '/') . '/' . $domain . '-' . $variant . '.mo';
+        if (is_readable($mofile) && yourls_load_textdomain($domain, $mofile)) {
+            return;
+        }
+    }
 }
 
 // ─── Register admin page ───────────────────────────────────
